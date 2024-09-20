@@ -94,12 +94,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <label for="fluido">Fluido</label>
 
       <label for="lang-program" class="field" >Lenguajes de programación</label>
-      <input type="checkbox" id="javascript" name="lenguajes_programacion[]" value="JavaScript">
+
+      <select name="lenguajes_programacion[]" id="" class="text-input" multiple style="height: 100px">   
+          <option value="Javascript">Javascript</option>
+          <option value="Python">Python</option>
+          <option value="PHP">PHP</option>
+        </select>
+
+      <!-- <input type="checkbox" id="javascript" name="lenguajes_programacion[]" value="JavaScript">
       <label id="javascript">Javascript</label>
       <input type="checkbox" id="python" name="lenguajes_programacion[]" value="Python">
       <label id="python">Python</label>
       <input type="checkbox" id="php" name="lenguajes_programacion[]" value="PHP">
-      <label id="php">PHP</label>
+      <label id="php">PHP</label> -->
 
       <label  class="field">Aptitudes</label>
       <input list="lista_aptitudes" name="aptitudes" id="aptitudes" class="text-input">
@@ -191,7 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <li>Habilidades físicas</li> -->
         </ul>
       </div>
-      <div>
+      <!-- <div>
         <h3>Lenguajes de Programación</h3>
         <hr />
         <ul>
@@ -201,6 +208,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           }
           ?>
         </ul>
+      </div> -->
     </nav>
 
     <article >
@@ -209,6 +217,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <p>
         <?php echo $perfil ?>
       </p>
+      <h3>Lenguajes de Programacion</h3>
+      <hr />
+      <div>
+        <ul class="experiencia-list">
+          <?php 
+            foreach ($lenguajes_programacion as &$lenguaje) {
+              echo "<li>". $lenguaje ."</li>";
+          }
+          ?>
+        </ul>
+      </div>
+
       <!-- <h3>EXPERIENCIA LABORAL</h3>
       <hr />
       <div>
