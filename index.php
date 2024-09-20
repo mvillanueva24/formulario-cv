@@ -13,17 +13,17 @@ $habilidades = [];
 $perfil = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $nombre = isset($_POST['nombre']) ? htmlspecialchars($_POST['nombre']) : 'N/A';
-  $fecha_nacimiento = isset($_POST['nacimiento']) ? htmlspecialchars($_POST['nacimiento']) : 'N/A';
-  $ocupacion = isset($_POST['ocupacion']) ? htmlspecialchars($_POST['ocupacion']) : 'N/A';
-  $telefono = isset($_POST['telefono']) ? htmlspecialchars($_POST['telefono']) : 'N/A';
-  $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : 'N/A';
-  $nacionalidad = isset($_POST['nacionalidad']) ? htmlspecialchars($_POST['nacionalidad']) : 'N/A';
-  $nivel_ingles = isset($_POST['ingles']) ? htmlspecialchars($_POST['ingles']) : 'N/A';
+  $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : 'N/A';
+  $fecha_nacimiento = isset($_POST['nacimiento']) ? $_POST['nacimiento'] : 'N/A';
+  $ocupacion = isset($_POST['ocupacion']) ? $_POST['ocupacion'] : 'N/A';
+  $telefono = isset($_POST['telefono']) ? $_POST['telefono'] : 'N/A';
+  $email = isset($_POST['email']) ? $_POST['email'] : 'N/A';
+  $nacionalidad = isset($_POST['nacionalidad']) ? $_POST['nacionalidad'] : 'N/A';
+  $nivel_ingles = isset($_POST['ingles']) ? $_POST['ingles'] : 'N/A';
   $lenguajes_programacion = isset($_POST['lenguajes_programacion']) ? $_POST['lenguajes_programacion'] : [];
-  $aptitudes = isset($_POST['aptitudes']) ? htmlspecialchars($_POST['aptitudes']) : 'N/A';
+  $aptitudes = isset($_POST['aptitudes']) ? $_POST['aptitudes'] : 'N/A';
   $habilidades = isset($_POST['habilidades']) ? $_POST['habilidades'] : [];
-  $perfil = isset($_POST['perfil']) ? htmlspecialchars($_POST['perfil']) : 'N/A';
+  $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : 'N/A';
 }
 
 ?>
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 
 <head>
-  <title>CSS Template</title>
+  <title>CV</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="index.css">
